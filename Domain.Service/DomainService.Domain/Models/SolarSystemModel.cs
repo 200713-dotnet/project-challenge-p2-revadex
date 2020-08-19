@@ -13,6 +13,12 @@ namespace DomainService.Domain.Models
 
       public string Description {get;set;}
 
+      public SolarSystemModel(){
+
+        Planets = new List<PlanetModel>();
+
+      }
+
     }
 
 }

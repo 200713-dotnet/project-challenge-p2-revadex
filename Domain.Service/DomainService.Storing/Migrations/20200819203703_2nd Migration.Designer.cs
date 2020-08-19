@@ -4,14 +4,16 @@ using DomainService.Storing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DomainService.Storing.Migrations
 {
     [DbContext(typeof(DomainServiceDBContext))]
-    partial class DomainServiceDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200819203703_2nd Migration")]
+    partial class _2ndMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -147,6 +149,9 @@ namespace DomainService.Storing.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Radius")
+                        .HasColumnType("float");
 
                     b.Property<double>("Temperature")
                         .HasColumnType("float");

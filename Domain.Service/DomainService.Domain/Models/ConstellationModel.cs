@@ -13,6 +13,12 @@ namespace DomainService.Domain.Models
 
       public string Description {get;set;}
 
+      public ConstellationModel(){
+
+        Stars = new List<StarModel>();
+
+      }
+
     }
 
 }

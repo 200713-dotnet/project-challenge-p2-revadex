@@ -6,8 +6,6 @@ namespace DomainService.Domain.Models
     public class PlanetModel : AModel
     {
 
-      public double Magnitude {get;set;}
-
       public double Distance {get;set;}
 
       public double Radius {get;set;}
