@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainService.Storing", "Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainService.Domain", "DomainService.Domain\DomainService.Domain.csproj", "{C16FCF25-A28B-4006-B37D-40DCF40253C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainService.Testing", "DomainService.Testing\DomainService.Testing.csproj", "{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{C16FCF25-A28B-4006-B37D-40DCF40253C3}.Release|x64.Build.0 = Release|Any CPU
 		{C16FCF25-A28B-4006-B37D-40DCF40253C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{C16FCF25-A28B-4006-B37D-40DCF40253C3}.Release|x86.Build.0 = Release|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Debug|x64.Build.0 = Debug|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Debug|x86.Build.0 = Debug|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Release|x64.ActiveCfg = Release|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Release|x64.Build.0 = Release|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Release|x86.ActiveCfg = Release|Any CPU
+		{0FBF1734-26BE-4B13-AA4B-90AEFFB8FB44}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

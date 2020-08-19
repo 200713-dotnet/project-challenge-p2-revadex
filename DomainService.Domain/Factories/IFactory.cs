@@ -6,7 +6,7 @@ namespace DomainService.Domain.Factories
   public interface IFactory
   {
 
-    AModel Create();
+    AModel Create(string s);
 
   }
 
