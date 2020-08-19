@@ -2,7 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<img src="~/img/23614032.jpg" alt="Northern Hemisphere" class="constellation" id="constellation-sphere">
+<img src="~/img/23614029.jpg" alt="Southern Hemisphere" class="constellation" id="constellation-sphere">
+<section>
+  @using (Html.BeginForm("Test", "Star", FormMethod.Post)) {
+    <input type="submit" value="Test Constellation">
+  }
+  @using (Html.BeginForm("Test", "Planet", FormMethod.Post)) {
+    <input type="submit" value="Test Planet">
+  }
+</section>
