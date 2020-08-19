@@ -2,8 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<img src="~/img/23614032.jpg" alt="Northern Hemisphere" class="constellation" id="constellation-sphere">
-<img src="~/img/23614029.jpg" alt="Southern Hemisphere" class="constellation" id="constellation-sphere">
+<span class="const-container">
+  <img src="~/img/23614032.jpg" alt="Northern Hemisphere" class="constellation" id="constellation-sphere">
+  <button class="btn" style="top: 50%; left: 50%;"></button>
+</span>
+<span class="const-container">
+  <img src="~/img/23614029.jpg" alt="Southern Hemisphere" class="constellation" id="constellation-sphere">
+  <button class="btn" style="top: 50%; left: 50%;"></button>
+</span>
+
 <section>
   @using (Html.BeginForm("Test", "Star", FormMethod.Post)) {
     <input type="submit" value="Test Constellation">

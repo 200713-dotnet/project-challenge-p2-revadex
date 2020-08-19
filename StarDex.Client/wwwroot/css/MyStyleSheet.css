@@ -11,3 +11,35 @@
 #constellation-sphere.constellation {
   width: 49%;
 }
+
+ /* Container needed to position the button. Adjust the width as needed */
+ .const-container {
+  position: relative;
+  /* width: 10%; */
+}
+
+/* Make the image responsive */
+.const-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.const-container .btn {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  /* -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 3px 3px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+} 
