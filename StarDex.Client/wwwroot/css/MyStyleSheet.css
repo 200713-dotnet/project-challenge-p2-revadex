@@ -34,12 +34,13 @@
   background-color: #555;
   color: white;
   font-size: 16px;
-  padding: 3px 3px;
+  padding: 6px 6px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  opacity: 60%;
 }
 
-.container .btn:hover {
+.const-container .btn:hover {
   background-color: black;
 } 
