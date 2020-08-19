@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Controllers;
 
-namespace Pikture.Service.Controllers
+namespace Image.Client.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]

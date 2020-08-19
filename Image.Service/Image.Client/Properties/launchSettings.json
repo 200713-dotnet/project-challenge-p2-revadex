@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:61454",
-      "sslPort": 44325
+      "applicationUrl": "http://localhost:13687",
+      "sslPort": 44310
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ImageService.Service": {
+    "Image.Client": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
