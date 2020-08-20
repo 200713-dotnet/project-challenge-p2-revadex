@@ -1,4 +1,6 @@
 using System;
+using Image.Domain.Models;
+using Image.Storing.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Image.Client.Controllers
@@ -8,18 +10,23 @@ namespace Image.Client.Controllers
   public class ImageController : ControllerBase
   {
 
-    [HttpGet]
-    public IActionResult Get()
-    {
-      return Ok();
-      // return all images from db
-    }
+    ImageServiceRepository _repo = new ImageServiceRepository();
 
     /* [HttpGet]
-    public IActionResult Get( based off name )
+    public IActionResult Get()
     {
-      //query db for image with matching name
+      //return all images
+      return Ok();
     } */
+
+    //httpget request for image by name
+    [HttpGet]
+    public IActionResult Get( string name )
+    {
+      ImageModel img = _repo.GetImage(name);
+
+      return Ok(img.Url);
+    }
     
   }
 }
