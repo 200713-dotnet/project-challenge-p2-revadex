@@ -8,5 +8,8 @@
   <h1>@Model.name</h1>
   <img src="@Model.imageURL" alt="@Model.name Image">
   <p>@Model.description</p>
-  
+  <h2>Stars:</h2>
+  @foreach (StarDex.Client.Models.StarViewModel star in Model.stars) {
+    <span>@star.name</span><br>
+  }
 </section>

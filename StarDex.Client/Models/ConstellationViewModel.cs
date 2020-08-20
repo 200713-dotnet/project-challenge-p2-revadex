@@ -5,6 +5,6 @@ namespace StarDex.Client.Models {
     public string name { get; set; }
     public string imageURL { get; set; }
     public string description { get; set; }
-    public List<string> stars { get; set; }
+    public List<StarViewModel> stars { get; set; }
   }
 }
