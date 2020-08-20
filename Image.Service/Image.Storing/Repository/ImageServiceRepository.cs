@@ -11,7 +11,7 @@ namespace Image.Storing.Repository
     //Get Image by name
     public ImageModel GetImage(string name)
     {
-      return _db.Images.FirstOrDefault(i => i.Name == name);
+      return _db.Images.FirstOrDefault(i => i.Name.ToUpper().Equals(name.ToUpper()));
     }
 
 
