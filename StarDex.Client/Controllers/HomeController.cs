@@ -8,8 +8,6 @@ using StarDex.Client.Models;
 namespace StarDex.Client.Controllers {
   public class HomeController : Controller {
     private readonly ILogger<HomeController> _logger;
-    // private List<ConstellationButtonModel> northStarButtons;
-    // private List<ConstellationButtonModel> southStarButtons;
     private List<ConstellationButtonModel> starButtons;
 
     public HomeController(ILogger<HomeController> logger) {
@@ -24,6 +22,7 @@ namespace StarDex.Client.Controllers {
     }
 
     List<ConstellationButtonModel> StarButtons() {
+      // TODO: Replace with database calls
       return new List<ConstellationButtonModel>{
         new ConstellationButtonModel {name = "Ursa Minor", top = -2070, left = 65},
         new ConstellationButtonModel {name = "Ursa Major", top = -1270, left = 85}

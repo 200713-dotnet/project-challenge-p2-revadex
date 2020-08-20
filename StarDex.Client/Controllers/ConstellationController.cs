@@ -4,6 +4,7 @@ using StarDex.Client.Models;
 
 namespace StarDex.Client.Controllers {
   public class ConstellationController : Controller {
+    // the expectation is that only named stars will be in the stars list, no HD 163034 or anything with greek letters
     [HttpGet]
     public IActionResult Get(string id) {
       ConstellationViewModel model = new ConstellationViewModel();
@@ -14,8 +15,7 @@ namespace StarDex.Client.Controllers {
         "Polaris, the brightest star in the constellation, is a yellow-white supergiant and the brightest Cepheid variable star in the night sky, ranging from an apparent magnitude of 1.97 to 2.00. Beta Ursae Minoris, also known as Kochab, is an aging star that has swollen and cooled to become an orange giant with an apparent magnitude of 2.08, only slightly fainter than Polaris. Kochab and magnitude 3 Gamma Ursae Minoris have been called the \"guardians of the pole star\".[3] Planets have been detected orbiting four of the stars, including Kochab. The constellation also contains an isolated neutron star—Calvera—and H1504+65, the hottest white dwarf yet discovered, with a surface temperature of 200,000 K.";
         model.stars = new List<StarViewModel>{
           new StarViewModel{name = "Polaris", distanceInLightYears = 443, temperatureInKelvin = 6900, solarMass = 5.4, description = "group of stars"},
-          new StarViewModel{name = "Calvera", distanceInLightYears = 625, description = "a description - lots of info missing"},
-          new StarViewModel{name = "β Ursae Minoris", distanceInLightYears = 130.9, temperatureInKelvin = 4030, solarMass = 2.2, description = "a description"}
+          new StarViewModel{name = "Calvera", distanceInLightYears = 625, description = "a description - lots of info missing"}
         };
         model.imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Ursa_Minor_IAU.svg/540px-Ursa_Minor_IAU.svg.png";
         return View("Constellation", model);
@@ -27,7 +27,7 @@ namespace StarDex.Client.Controllers {
         model.stars = new List<StarViewModel>{
           new StarViewModel{name = "Groombridge 1830", distanceInLightYears = 29.93, temperatureInKelvin = 4759, solarMass = 0.661, description = "a description"},
           new StarViewModel{name = "Lalande 21185", distanceInLightYears = 8.31, temperatureInKelvin = 3828, solarMass = 0.46, description = "a description"},
-          new StarViewModel{name = "ε UMa", distanceInLightYears = 81, temperatureInKelvin = 9020, solarMass = 2.91, description = "a description"}
+          new StarViewModel{name = "Mizar", distanceInLightYears = 82.9, temperatureInKelvin = 9000, solarMass = 2.2381, description = "a description"}
         };
         model.imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ursa_Major_IAU.svg/600px-Ursa_Major_IAU.svg.png";
         return View("Constellation", model);
