@@ -5,18 +5,24 @@
 }
 
 <section>
-  @using (Html.BeginForm("Clicked", "Home", FormMethod.Post)) {
+  @using (Html.BeginForm("Get", "Constellation", FormMethod.Get)) {
     <span class="const-container">
+      <img src="~/img/map.jpg" alt="Constellation Map" class="constellation" id="constellation-sphere">
+      @foreach (StarDex.Client.Models.ConstellationButtonModel constellation in Model.stars) {
+        <input type="submit" name="id" value="@constellation.name" class="btn" style="top: @constellation.top%; left: @constellation.left%;">
+      }
+    </span>
+    @* <span class="const-container">
       <img src="~/img/23614032.jpg" alt="Northern Hemisphere" class="constellation" id="constellation-sphere">
       @foreach (StarDex.Client.Models.ConstellationButtonModel constellation in Model.north) {
-        <input type="submit" name="N" value="N" class="btn" style="top: 50%; left: 50%;">
+        <input type="submit" name="id" value="@constellation.name" class="btn" style="top: @constellation.top%; left: @constellation.left%;">
       }
     </span>
     <span class="const-container">
       <img src="~/img/23614029.jpg" alt="Southern Hemisphere" class="constellation" id="constellation-sphere">
-      @foreach (StarDex.Client.Models.ConstellationButtonModel constellation in Model.north) {
-        <input type="submit" name="S" value="S" class="btn" style="top: 50%; left: 50%;">
+      @foreach (StarDex.Client.Models.ConstellationButtonModel constellation in Model.south) {
+        <input type="submit" name="id" value="@constellation.name" class="btn" style="top: @constellation.top%; left: @constellation.left%;">
       }
-    </span>
+    </span> *@
   }
 </section>

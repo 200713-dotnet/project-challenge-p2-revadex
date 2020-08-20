@@ -8,24 +8,26 @@ using StarDex.Client.Models;
 namespace StarDex.Client.Controllers {
   public class HomeController : Controller {
     private readonly ILogger<HomeController> _logger;
-    private List<ConstellationButtonModel> _northStarButtons;
-    private List<ConstellationButtonModel> _southStarButtons;
+    // private List<ConstellationButtonModel> northStarButtons;
+    // private List<ConstellationButtonModel> southStarButtons;
+    private List<ConstellationButtonModel> starButtons;
 
     public HomeController(ILogger<HomeController> logger) {
       _logger = logger;
     }
 
     public IActionResult Index() {
-      _northStarButtons = new List<ConstellationButtonModel>{
-        new ConstellationButtonModel {name = "Test", constellation = "Test", top = 50, left = 50}
-      };
-      _southStarButtons = new List<ConstellationButtonModel>{
-        new ConstellationButtonModel {name = "Test", constellation = "Test", top = 50, left = 50}
-      };
+      starButtons = StarButtons();
       HomeViewModel model = new HomeViewModel();
-      model.north = _northStarButtons;
-      model.south = _southStarButtons;
+      model.stars = starButtons;
       return View(model);
+    }
+
+    List<ConstellationButtonModel> StarButtons() {
+      return new List<ConstellationButtonModel>{
+        new ConstellationButtonModel {name = "Ursa Minor", top = -2070, left = 65},
+        new ConstellationButtonModel {name = "Ursa Major", top = -1270, left = 85}
+      };
     }
 
     public IActionResult Privacy() {
@@ -36,17 +38,5 @@ namespace StarDex.Client.Controllers {
     public IActionResult Error() {
       return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-
-    // public List<ConstellationButtonModel> GetNorthStars() {
-    //   List<ConstellationButtonModel> ret = new List<ConstellationButtonModel>();
-    //   ret.AddRange(_northStarButtons);
-    //   return ret;
-    // }
-
-    // public List<ConstellationButtonModel> GetSouthStars() {
-    //   List<ConstellationButtonModel> ret = new List<ConstellationButtonModel>();
-    //   ret.AddRange(_southStarButtons);
-    //   return ret;
-    // }
   }
 }
