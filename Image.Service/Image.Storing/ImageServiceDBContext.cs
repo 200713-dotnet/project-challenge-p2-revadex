@@ -1,7 +1,7 @@
 using System;
 using Image.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extentions.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace Image.Storing
 {
@@ -24,7 +24,7 @@ namespace Image.Storing
         }
       }
 
-      public DomainServiceDBContext(DbContextOptions options) : base(options){}
+      public ImageServiceDBContext(DbContextOptions options) : base(options){}
 
       protected override void OnModelCreating(ModelBuilder builder)
       {
