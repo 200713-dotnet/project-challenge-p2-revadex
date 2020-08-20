@@ -4,14 +4,16 @@ using DomainService.Storing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DomainService.Storing.Migrations
 {
     [DbContext(typeof(DomainServiceDBContext))]
-    partial class DomainServiceDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200820142729_4th Migration")]
+    partial class _4thMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

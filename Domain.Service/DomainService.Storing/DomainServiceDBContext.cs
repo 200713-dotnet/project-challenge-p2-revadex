@@ -1,6 +1,7 @@
 ﻿using System;
 using DomainService.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace DomainService.Storing
 {
@@ -25,12 +26,14 @@ namespace DomainService.Storing
 
       }
 
+      public IConfiguration config {get;set;}
+
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
 
         if (!optionsBuilder.IsConfigured)
         {
 
-          optionsBuilder.UseSqlServer("Server=localhost;database=DomainServiceDB;User ID=sa;Password=Password123;");
+          optionsBuilder.UseSqlServer("Server=revadex.database.windows.net;database=revadex_images;User ID=sqladmin;Password=Password12345");
 
         }
 
