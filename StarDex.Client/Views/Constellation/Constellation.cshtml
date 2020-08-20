@@ -10,6 +10,6 @@
   <p>@Model.description</p>
   <h2>Stars:</h2>
   @foreach (StarDex.Client.Models.StarViewModel star in Model.stars) {
-    <a href="/Star/Get?name=@star.name">@star.name</a><br>
+    <a href="/Star/Get?name=@star.Name">@star.Name</a><br>
   }
 </section>

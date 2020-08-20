@@ -1,20 +1,41 @@
+using System;
+using System.IO;
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using StarDex.Client.Models;
 
 namespace StarDex.Client.Controllers {
     public class StarController : Controller {
       [HttpGet]
       public IActionResult Get(string name) {
-        // TODO: Replace with database calls
-        StarViewModel model = new StarViewModel{name = name};
-        if (name == "Polaris") {
-          return View("Star", new StarViewModel{name = "Polaris", distanceInLightYears = 443, temperatureInKelvin = 6900, solarMass = 5.4, description = "group of stars", imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Polaris_alpha_ursae_minoris.jpg/800px-Polaris_alpha_ursae_minoris.jpg"});
-        } else if (name == "Calvera") {
-          return View("Star", new StarViewModel{name = "Calvera", distanceInLightYears = 625, description = "a description - lots of info missing"});
-        } else if (name == "Mizar") {
-          return View("Star", new StarViewModel{name = "Mizar", distanceInLightYears = 82.9, temperatureInKelvin = 9000, solarMass = 2.2381, description = "a description", imageURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mizar_and_Alcor.jpg/800px-Mizar_and_Alcor.jpg"});
+        string jsonString = null;
+        HttpWebRequest request = (HttpWebRequest) WebRequest.Create($"https://domainserviceapi.azurewebsites.net/api/Star/{name}");
+        HttpWebResponse response;
+        try {
+          response = (HttpWebResponse) request.GetResponse();
+        } catch (WebException e) {
+          StarViewModel model = new StarViewModel{Name = name};
+          response = (HttpWebResponse) e.Response;
+          if (response != null) {
+            if ((int) response.StatusCode == 404) {
+              model.reasonForError = "Either the API is not running, or a star with this name is not in the database. Please try again later.";
+            } else {
+              model.reasonForError = $"A {(int) response.StatusCode} error has occured processing your request";
+            }
+          } else {
+            model.reasonForError = "There was a problem processing your request. Please try again later.";
+          }
+          return View("Error", model);
         }
-        return Redirect("/");
+        using (Stream stream = response.GetResponseStream()) {
+          using (StreamReader reader = new StreamReader(stream)) {
+            jsonString = reader.ReadToEnd();
+          }
+        }
+        StarViewModel model2 = JsonConvert.DeserializeObject<StarViewModel>(jsonString);
+        response.Dispose();
+        return View("Star", model2);
       }
     }
 }

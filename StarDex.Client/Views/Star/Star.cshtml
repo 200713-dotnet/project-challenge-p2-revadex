@@ -1,16 +1,16 @@
 @model StarDex.Client.Models.StarViewModel
 
 @{
-  ViewData["Title"] = @Model.name;
+  ViewData["Title"] = @Model.Name;
 }
 
-<h1>@Model.name</h1>
+<h1>@Model.Name</h1>
 
 <section>
-  <img src="@Model.imageURL" alt="Image of @Model.name"><br><br>
-  <span><b>Distance from Earth:</b> @Model.distanceInLightYears light years</span><br>
-  <span><b>Temperature:</b> @Model.temperatureInKelvin°K</span><br>
-  <span><b>Mass:</b> @Model.solarMass M☉ (solar mass)</span><br>
-  <span>@Model.description</span>
+  <img src="@Model.imageURL" alt="Image of @Model.Name"><br><br>
+  <span><b>Distance from Earth:</b> @Model.Distance light years</span><br>
+  <span><b>Temperature:</b> @Model.Temperature°K</span><br>
+  <span><b>Mass:</b> @Model.Mass M☉ (solar mass)</span><br>
+  <span>@Model.Description</span>
   <span></span>
 </section>
