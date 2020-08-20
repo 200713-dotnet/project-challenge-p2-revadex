@@ -8,13 +8,13 @@ namespace Image.Storing
     public class ImageServiceDBContext : DbContext
     {
 
-      public DbSet<ImageModel> Images {get;set;}
+      public DbSet<ImageModel> Images { get; set; }
 
       public ImageServiceDBContext()
       {
       }
 
-      public IConfiguration config {get;set;}
+      public IConfiguration config { get; set; }
 
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
       {
@@ -24,7 +24,7 @@ namespace Image.Storing
         }
       }
 
-      public ImageServiceDBContext(DbContextOptions options) : base(options){}
+      public ImageServiceDBContext(DbContextOptions options) : base(options) {}
 
       protected override void OnModelCreating(ModelBuilder builder)
       {

@@ -6,4 +6,5 @@ namespace Image.Domain.Models
     public string Url { set; get; }
     public string Name { set; get; }
   }
+
 }

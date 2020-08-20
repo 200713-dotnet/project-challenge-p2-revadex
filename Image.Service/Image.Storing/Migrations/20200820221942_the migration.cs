@@ -2,7 +2,7 @@
 
 namespace Image.Storing.Migrations
 {
-    public partial class firstmigration : Migration
+    public partial class themigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,7 +10,8 @@ namespace Image.Storing.Migrations
                 name: "Images",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Url = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true)
                 },

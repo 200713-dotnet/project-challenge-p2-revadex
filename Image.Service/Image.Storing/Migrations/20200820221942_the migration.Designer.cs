@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Image.Storing.Migrations
 {
     [DbContext(typeof(ImageServiceDBContext))]
-    [Migration("20200820201004_first migration")]
-    partial class firstmigration
+    [Migration("20200820221942_the migration")]
+    partial class themigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,8 +22,10 @@ namespace Image.Storing.Migrations
 
             modelBuilder.Entity("Image.Domain.Models.ImageModel", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");

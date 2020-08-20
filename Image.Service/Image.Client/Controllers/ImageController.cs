@@ -20,7 +20,7 @@ namespace Image.Client.Controllers
     } */
 
     //httpget request for image by name
-    [HttpGet]
+    [HttpGet("{name}")]
     public IActionResult Get( string name )
     {
       ImageModel img = _repo.GetImage(name);
