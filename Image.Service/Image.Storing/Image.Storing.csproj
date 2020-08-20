@@ -12,4 +12,8 @@
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="3.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Image.Domain\Image.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

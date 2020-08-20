@@ -1,50 +1,37 @@
-using Microsoft.EntityFrameworkCore;
+using System;
 using Image.Domain.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extentions.Configuration;
 
 namespace Image.Storing
 {
-
-  public partial class ImageServiceDBContext : DbContext
-  {
-    public ImageServiceDBContext()
+    public class ImageServiceDBContext : DbContext
     {
-    }
 
-    public ImageServiceDBContext(DbContextOptions Options) : base(Options) { }
+      public DbSet<ImageModel> Images {get;set;}
 
-    //table
-    public DbSet<ImageModel> Images { get; set; }
-
-    protected override void OnConfiguring(DbContextOptinsBuilder optionsBuilder)
-    {
-      if (!optionsBuilder.IsConfigured)
+      public ImageServiceDBContext()
       {
-        optionsBuilder.UseSqlServer("--connection string-- can ignore in .gitignore");
       }
+
+      public IConfiguration config {get;set;}
+
+      protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+      {
+        if (!optionsBuilder.IsConfigured)
+        {
+          optionsBuilder.UseSqlServer("Server=revadex.database.windows.net;database=revadex_images;User ID=sqladmin;Password=Password12345");
+        }
+      }
+
+      public DomainServiceDBContext(DbContextOptions options) : base(options){}
+
+      protected override void OnModelCreating(ModelBuilder builder)
+      {
+        builder.Entity<ImageModel>().HasKey(e => e.Id);
+
+        base.OnModelCreating(builder);
+      }
+
     }
-
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-
-      builder.Entity<ImageModel>(entity =>
-               {
-                 entity.HasKey(e => e.Id);
-
-                 entity.Property(e => e.Url)
-                       .IsRequired()
-                       .HasMaxLength(300);
-
-                 entity.Property(e => e.Name)
-                       .IsRequired()
-                       .HasMaxLength(100);
-               });
-
-    }
-
-
-
-
-
-  }
-
 }
