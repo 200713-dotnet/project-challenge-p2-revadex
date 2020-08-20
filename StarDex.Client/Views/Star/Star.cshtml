@@ -7,5 +7,10 @@
 <h1>@Model.name</h1>
 
 <section>
-
+  <img src="@Model.imageURL" alt="Image of @Model.name"><br><br>
+  <span><b>Distance from Earth:</b> @Model.distanceInLightYears light years</span><br>
+  <span><b>Temperature:</b> @Model.temperatureInKelvin°K</span><br>
+  <span><b>Mass:</b> @Model.solarMass M☉ (solar mass)</span><br>
+  <span>@Model.description</span>
+  <span></span>
 </section>
