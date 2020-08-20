@@ -5,5 +5,6 @@ namespace StarDex.Client.Models {
     public double temperatureInKelvin { get; set; }
     public double solarMass { get; set; }
     public string description { get; set; }
+    public string imageURL { get; set; }
   }
 }
