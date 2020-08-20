@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DomainService.Domain;
 using DomainService.Domain.Models;
 using DomainService.Storing.Repositories;
@@ -27,6 +28,21 @@ namespace DomainService.ClientMVC.Controllers
       }
 
       return Ok(jconv.Convert(solarSystem));
+
+    }
+
+    [HttpGet]
+    public IActionResult Get(){
+
+      List<SolarSystemModel> solarSystems = repo.GetAllSolarSystems();
+
+      if (solarSystems == null){
+
+        return NotFound();
+
+      }
+
+      return Ok(jconv.Convert(solarSystems));
 
     }
 

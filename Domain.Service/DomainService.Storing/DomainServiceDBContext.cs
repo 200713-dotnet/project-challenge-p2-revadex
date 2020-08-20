@@ -33,7 +33,7 @@ namespace DomainService.Storing
         if (!optionsBuilder.IsConfigured)
         {
 
-          optionsBuilder.UseSqlServer("Server=revadex.database.windows.net;database=revadex_images;User ID=sqladmin;Password=Password12345");
+          optionsBuilder.UseSqlServer("Server=revadex.database.windows.net;database=DomainServiceDB;User ID=sqladmin;Password=Password12345");
 
         }
 
