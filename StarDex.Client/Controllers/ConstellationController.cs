@@ -41,6 +41,21 @@ namespace StarDex.Client.Controllers {
       foreach (JToken star in json["Stars"]) {
         model.stars.Add(new StarViewModel{Name = (string) star["Name"]});
       }
+
+      request = (HttpWebRequest) WebRequest.Create($"https://imageservicerevadex.azurewebsites.net/api/Image/{name}");
+      try {
+        response = (HttpWebResponse) request.GetResponse();
+        using (response) {
+        using (Stream stream = response.GetResponseStream()) {
+          using (StreamReader reader = new StreamReader(stream)) {
+            model.imageURL = reader.ReadToEnd();
+          }
+        }
+      }
+      } catch (WebException e) {
+        response = (HttpWebResponse) e.Response;
+      }
+
       return View("Constellation", model);
     }
   }
