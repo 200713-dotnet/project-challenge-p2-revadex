@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using StarDex.Client.Models;
 
 namespace StarDex.Client.Controllers {
@@ -22,11 +25,21 @@ namespace StarDex.Client.Controllers {
     }
 
     List<ConstellationButtonModel> StarButtons() {
-      // TODO: Replace with database calls
-      return new List<ConstellationButtonModel>{
-        new ConstellationButtonModel {name = "Ursa Minor", top = -2070, left = 65},
-        new ConstellationButtonModel {name = "Ursa Major", top = -1270, left = 85}
-      };
+      string jsonString = null;
+      HttpWebRequest request = (HttpWebRequest) WebRequest.Create("https://domainserviceapi.azurewebsites.net/api/Constellation/");
+      using (HttpWebResponse response = (HttpWebResponse) request.GetResponse()) {
+        using (Stream stream = response.GetResponseStream()) {
+          using (StreamReader reader = new StreamReader(stream)) {
+            jsonString = reader.ReadToEnd();
+          }
+        }
+      }
+      List<ConstellationButtonModel> constellations = new List<ConstellationButtonModel>();
+      JArray array = JArray.Parse(jsonString);
+      foreach (JToken token in array) {
+        constellations.Add(new ConstellationButtonModel{name = (string) token["Name"], top = (double) token["Top"], left = (double) token["Left"]});
+      }
+      return constellations;
     }
 
     public IActionResult Privacy() {
