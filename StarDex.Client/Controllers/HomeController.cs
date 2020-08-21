@@ -12,6 +12,7 @@ namespace StarDex.Client.Controllers {
   public class HomeController : Controller {
     private readonly ILogger<HomeController> _logger;
     private List<ConstellationButtonModel> starButtons;
+    private List<PlanetViewModel> planetButtons;
 
     public HomeController(ILogger<HomeController> logger) {
       _logger = logger;
@@ -19,8 +20,10 @@ namespace StarDex.Client.Controllers {
 
     public IActionResult Index() {
       starButtons = StarButtons();
+      planetButtons = PlanetButtons();
       HomeViewModel model = new HomeViewModel();
       model.stars = starButtons;
+      model.planets = planetButtons;
       return View(model);
     }
 
@@ -40,6 +43,24 @@ namespace StarDex.Client.Controllers {
         constellations.Add(new ConstellationButtonModel{name = (string) token["Name"], top = (double) token["Top"], left = (double) token["Left"]});
       }
       return constellations;
+    }
+
+    List<PlanetViewModel> PlanetButtons() {
+      string jsonString = null;
+      HttpWebRequest request = (HttpWebRequest) WebRequest.Create("https://domainserviceapi.azurewebsites.net/api/Planet/");
+      using (HttpWebResponse response = (HttpWebResponse) request.GetResponse()) {
+        using (Stream stream = response.GetResponseStream()) {
+          using (StreamReader reader = new StreamReader(stream)) {
+            jsonString = reader.ReadToEnd();
+          }
+        }
+      }
+      List<PlanetViewModel> planets = new List<PlanetViewModel>();
+      JArray array = JArray.Parse(jsonString);
+      foreach (JToken token in array) {
+        planets.Add(new PlanetViewModel{Name = (string) token["Name"], Top = (double) token["Top"], Left = (double) token["Left"]});
+      }
+      return planets;
     }
 
     public IActionResult Privacy() {

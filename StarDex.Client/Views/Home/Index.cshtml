@@ -5,12 +5,17 @@
 }
 
 <section>
-  @using (Html.BeginForm("Get", "Constellation", FormMethod.Get)) {
-    <span class="const-container">
-      <img src="~/img/map.jpg" alt="Constellation Map" class="constellation" id="constellation-sphere">
+  <span class="const-container">
+    <img src="~/img/map.jpg" alt="Constellation Map" class="constellation" id="constellation-sphere">
+    @using (Html.BeginForm("Get", "Constellation", FormMethod.Get)) {
       @foreach (StarDex.Client.Models.ConstellationButtonModel constellation in Model.stars) {
         <input type="submit" name="name" value="@constellation.name" class="btn" style="top: @constellation.top%; left: @constellation.left%;">
       }
-    </span>
-  }
+    }
+    @using (Html.BeginForm("Get", "Planet", FormMethod.Get)) {
+      @foreach (StarDex.Client.Models.PlanetViewModel planet in Model.planets) {
+        <input type="submit" name="name" value="@planet.Name" class="btn" style="top: @planet.Top%; left: @planet.Left%;">
+      }
+    }
+  </span>
 </section>
