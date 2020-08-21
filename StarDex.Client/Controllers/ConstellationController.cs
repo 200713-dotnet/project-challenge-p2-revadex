@@ -38,6 +38,9 @@ namespace StarDex.Client.Controllers {
         description = (string) json["Description"],
         stars = new List<StarViewModel>()
       };
+      foreach (JToken star in json["Stars"]) {
+        model.stars.Add(new StarViewModel{Name = (string) star["Name"]});
+      }
       return View("Constellation", model);
     }
   }
