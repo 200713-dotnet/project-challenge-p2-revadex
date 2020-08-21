@@ -20,6 +20,14 @@ namespace StarDex.Client.Controllers {
           }
         }
         PlanetViewModel model = JsonConvert.DeserializeObject<PlanetViewModel>(jsonString);
+        request = (HttpWebRequest) WebRequest.Create($"https://imageservicerevadex.azurewebsites.net/api/Image/{name}");
+        using (HttpWebResponse response = (HttpWebResponse) request.GetResponse()) {
+          using (Stream stream = response.GetResponseStream()) {
+            using (StreamReader reader = new StreamReader(stream)) {
+              model.ImageURL = reader.ReadToEnd();
+            }
+          }
+        }
         return View("Planet", model);
       }
     }
