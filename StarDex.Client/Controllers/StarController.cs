@@ -34,6 +34,20 @@ namespace StarDex.Client.Controllers {
           }
         }
         StarViewModel model2 = JsonConvert.DeserializeObject<StarViewModel>(jsonString);
+        request = (HttpWebRequest) WebRequest.Create($"https://imageservicerevadex.azurewebsites.net/api/Image/{name}");
+        try {
+          response = (HttpWebResponse) request.GetResponse();
+        } catch (WebException) {
+          StarViewModel model = new StarViewModel{Name = name};
+          model.reasonForError = "No star image";
+          return View("Error", model);
+        }
+        using (Stream stream = response.GetResponseStream()) {
+          using (StreamReader reader = new StreamReader(stream)) {
+            model2.imageURL = reader.ReadToEnd();
+          }
+        }
+
         response.Dispose();
         return View("Star", model2);
       }
