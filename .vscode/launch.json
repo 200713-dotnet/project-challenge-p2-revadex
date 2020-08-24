@@ -10,10 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/StarDex.Client/bin/Debug/netcoreapp3.1/StarDex.Client.dll",
+            "program": "${workspaceFolder}/Image.Service/Image.Client/bin/Debug/netcoreapp3.1/Image.Client.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/StarDex.Client",
-          
+            "cwd": "${workspaceFolder}/Image.Service/Image.Client",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
