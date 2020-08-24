@@ -27,7 +27,7 @@ namespace DomainService.Testing
           Console.WriteLine("Get Constellation Test:");
 
           DomainServiceRepository repo = new DomainServiceRepository();
-          ConstellationModel bigDipper = repo.GetConstellationByName("BigDipper");
+          ConstellationModel bigDipper = repo.GetConstellationByName("Ursa Major");
           
           Console.WriteLine("Big Dipper Stars: ");
 
