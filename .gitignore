@@ -5,6 +5,8 @@
 
 appsettings*.json
 
+.sonarqube/
+
 # User-specific files
 *.rsuser
 *.suo
