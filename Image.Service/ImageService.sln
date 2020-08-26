@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image.Domain", "Image.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image.Storing", "Image.Storing\Image.Storing.csproj", "{A1BB57BB-B825-469A-A588-3E6BBFEACCE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image.Testing", "Image.Testing\Image.Testing.csproj", "{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{A1BB57BB-B825-469A-A588-3E6BBFEACCE6}.Release|x64.Build.0 = Release|Any CPU
 		{A1BB57BB-B825-469A-A588-3E6BBFEACCE6}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1BB57BB-B825-469A-A588-3E6BBFEACCE6}.Release|x86.Build.0 = Release|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Debug|x64.Build.0 = Debug|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Debug|x86.Build.0 = Debug|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Release|x64.ActiveCfg = Release|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Release|x64.Build.0 = Release|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Release|x86.ActiveCfg = Release|Any CPU
+		{EC5EDE31-DD33-47C0-8A6D-70A1D7534097}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
