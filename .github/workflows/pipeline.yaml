@@ -60,7 +60,7 @@ jobs:
       - run: git fetch --unshallow
       - run: dotnet tool install --global dotnet-sonarscanner
       - run: |
-          dotnet sonarscannar begin -o:'jpchionglo' -k:'revadeximageservice' -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}' -d:sonar.host.url='https://sonarcloud.io'
+          dotnet sonarscanner begin -o:'jpchionglo' -k:'revadeximageservice' -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}' -d:sonar.host.url='https://sonarcloud.io'
           dotnet build Image.Service/ImageService.sln
           dotnet test Image.Service/Image.Testing/*.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
           dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}'
@@ -75,7 +75,7 @@ jobs:
       - run: git fetch --unshallow
       - run: dotnet tool install --global dotnet-sonarscanner
       - run: |
-          dotnet sonarscannar begin -o:'jpchionglo' -k:'revadexdomainservice' -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}' -d:sonar.host.url='https://sonarcloud.io'
+          dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexdomainservice' -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}' -d:sonar.host.url='https://sonarcloud.io'
           dotnet build Domain.Service/DomainService.sln
           dotnet test Domain.Service/DomainService.Testing/*.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
           dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}'
