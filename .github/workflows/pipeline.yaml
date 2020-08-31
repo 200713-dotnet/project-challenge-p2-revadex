@@ -99,52 +99,68 @@ jobs:
     defaults:
       run:
         working-directory: StarDex.AngularClient/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_angular
     runs-on: ubuntu-20.04
     steps:
         - uses: actions/checkout@v2
-        - run: docker login
-        - run: docker image build -f .docker/AngularClient.dockerfile -t angular .
-        - run: docker image tag angular jacobfantauzzi/ng2020
-        - run: docker image push jacobfantauzzi/ng2020
+        - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
+        - run: docker image build -f ../.docker/AngularClient.dockerfile -t angular .
+        - run: docker image tag angular jfantauzzi/ng2020
+        - run: docker image push jfantauzzi/ng2020
         - run: docker logout
 
   pack_image_api:
     defaults:
       run:
         working-directory: Image.Service/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_img_api
     runs-on: ubuntu-20.04
     steps:
         - uses: actions/checkout@v2
-        - run: docker login
-        - run: docker image build -f .docker/image_api.dockerfile -t image_api .
-        - run: docker image tag image_api jacobfantauzzi/imageapi2020
-        - run: docker image push jacobfantauzzi/imageapi2020
+        - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
+        - run: docker image build -f ../.docker/image_api.dockerfile -t image_api .
+        - run: docker image tag image_api jfantauzzi/imageapi2020
+        - run: docker image push jfantauzzi/imageapi2020
         - run: docker logout
   
   pack_domain_api:
     defaults:
       run:
         working-directory: Domain.Service/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_domain_api
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: docker login
-      - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
-      - run: docker image tag domain_api jacobfantauzzi/domainapi2020
-      - run: docker image push jacobfantauzzi/domainapi2020
+      - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
+      - run: docker image build -f ../.docker/domain_api.dockerfile -t domain_api .
+      - run: docker image tag domain_api jfantauzzi/domainapi2020
+      - run: docker image push jfantauzzi/domainapi2020
       - run: docker logout
 
   pack_mvc:
     defaults:
       run:
-        working-directory: StarDex.MvcClient/
+        working-directory: StarDex.MVCClient/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_mvc
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: docker login
-      - run: docker image build -f .docker/MvcClient.dockerfile -t mvc .
-      - run: docker image tag mvc jacobfantauzzi/mvc2020
-      - run: docker image push jacobfantauzzi/mvc2020
+      - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
+      - run: docker image build -f ../.docker/MVCClient.dockerfile -t mvc .
+      - run: docker image tag mvc jfantauzzi/mvc2020
+      - run: docker image push jfantauzzi/mvc2020
       - run: docker logout
 
 name: pipeline

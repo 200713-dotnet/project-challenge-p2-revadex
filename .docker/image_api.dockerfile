@@ -1,8 +1,8 @@
 # IMAGE SERVICE DOCKERFILE
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build
 WORKDIR /workspace
 COPY . . 
-RUN dotnet publish -c Release -o out Image.Service/Image.Client/*.csproj
+RUN dotnet publish -c Release -o out Image.Client/*.csproj
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /workspace
