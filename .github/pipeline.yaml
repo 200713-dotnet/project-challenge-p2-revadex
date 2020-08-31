@@ -1,0 +1,98 @@
+jobs:
+  build_angular:
+    defaults:
+      run:
+        working-directory: Stardex.AngularClient/ #does it need to be in ng10 folder
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci #clean-install
+      - run: npm run build
+      - run: npm run lint
+
+
+  build_img_api:
+    defaults:
+      run:
+        working-directory:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+  
+  build_domain_api:
+    defaults:
+      run:
+        working-directory: --
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+
+  build_aspnet_mvc:
+    defaults:
+      run:
+        working-directory: --
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+
+  pack_angular:
+    defaults:
+      run:
+        working-directory: stardex/
+      runs-on: ubuntu 20.04
+      steps:
+        - uses: actions/checkout@v2
+        - run: docker login
+        - run: docker image build -f .docker/stardex.dockerfile -t angular .
+        - run: docker image tag angular jacobfantauzzi/ng2020
+        - run: docker image push jacobfantauzzi/ng2020
+        - run: docker logout
+
+  pack_image_service:
+    defaults:
+      run:
+        working-directory: --
+      runs-on: ubuntu 20.04
+      steps:
+        - uses: actions/checkout@v2
+        - run: docker login
+        - run: docker image build -f .docker/image_api.dockerfile -t image_api .
+        - run: docker image tag image_api jacobfantauzzi/imageapi2020
+        - run: docker image push jacobfantauzzi/imageapi2020
+        - run: docker logout
+  
+  pack_image_service:
+    defaults:
+      run:
+        working-directory: --
+      runs-on: ubuntu 20.04
+      steps:
+        - uses: actions/checkout@v2
+        - run: docker login
+        - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
+        - run: docker image tag domain_api jacobfantauzzi/domainapi2020
+        - run: docker image push jacobfantauzzi/domainapi2020
+        - run: docker logout
+
+  pack_domain_service:
+    defaults:
+      run:
+        working-directory: --
+      runs-on: ubuntu 20.04
+      steps:
+        - uses: actions/checkout@v2
+        - run: docker login
+        - run: docker image build -f .docker/image_api.dockerfile -t image_api .
+        - run: docker image tag image_api jacobfantauzzi/imageapi2020
+        - run: docker image push jacobfantauzzi/imageapi2020
+        - run: docker logout
+
+name: pipeline
+    
+on: push
