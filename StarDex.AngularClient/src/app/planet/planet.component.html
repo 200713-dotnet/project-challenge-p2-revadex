@@ -1,0 +1,20 @@
+<input type="submit" name="name" label="Click" [value]="name" (click)="toggleChild()" class="btn">
+<ng-container *ngIf="shouldOpen">
+
+  <p><b>{{planet.Name}}</b></p>
+
+  <img [src]="image" style="display: block; height: 50%; width: 50%; margin-left: auto; margin-right: auto;" [alt]=name>
+  
+  <p>
+    <b>Mass:</b> {{planet.Mass}}
+  </p>
+  
+  <p>
+    <b>Volume:</b> {{planet.Volume}}
+  </p>
+
+  <p>
+    {{planet.Description}}
+  </p>
+
+</ng-container>

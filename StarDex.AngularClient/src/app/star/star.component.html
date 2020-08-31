@@ -1,0 +1,43 @@
+<input type="submit" name="name" label="Click" [value]="name" (click)="toggleChild()" class="btn">
+<ng-container *ngIf="shouldOpen">
+  
+  <p><b>{{star.Name}}</b></p>
+  
+  <img [src]="image" style="display: block; height: 50%; width: 50%; margin-left: auto; margin-right: auto;" [alt]=name>
+
+  <p>
+    <b>Distance:</b>
+    <ng-container *ngIf="showdistance">
+      {{star.Distance}} light years
+    </ng-container>
+    <ng-container *ngIf="!showdistance">
+      Unknown
+    </ng-container>
+  </p>
+
+  <p>
+    <b>Temperature:</b>
+    <ng-container *ngIf="showtemperature">
+      {{star.Temperature}} Kelvin
+    </ng-container>
+    <ng-container *ngIf="!showtemperature">
+      Unknown
+    </ng-container>
+  </p>
+
+  <p>
+    <b>Mass:</b>
+    <ng-container *ngIf="showmass">
+      {{star.Mass}} M☉ (solar mass)
+    </ng-container>
+    <ng-container *ngIf="!showmass">
+      Unknown
+    </ng-container>
+  </p>
+
+  <p>
+    {{star.Description}}
+  </p>
+
+</ng-container>
+<!-- info about star -->

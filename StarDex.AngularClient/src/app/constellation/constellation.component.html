@@ -1,0 +1,26 @@
+<!-- @using (Html.BeginForm("Get", "Constellation", FormMethod.Get)) {
+  @foreach (StarDex.Client.Models.ConstellationButtonModel constellation in Model.stars) {
+    <input type="submit" name="name" value="@constellation.name" class="btn" style="top: @constellation.top%; left: @constellation.left%;">
+  }
+}
+@using (Html.BeginForm("Get", "Planet", FormMethod.Get)) {
+  @foreach (StarDex.Client.Models.PlanetViewModel planet in Model.planets) {
+    <input type="submit" name="name" value="@planet.Name" class="btn" style="top: @planet.Top%; left: @planet.Left%;">
+  }
+} -->
+<link rel="stylesheet" href="constellation.component.css"> 
+
+<input type="submit" name="name" label="Click" [value]="name" (click)="toggleChild()" class="btn" [style]="buttonStyle">
+
+<ng-container *ngIf="shouldOpen">
+  <p><b>{{constellation.Name}}</b></p>
+  <img [src]="image" style="display: block; height: 50%; width: 50%; margin-left: auto; margin-right: auto;" [alt]=name>
+  <p>{{constellation.Description}}</p>
+  <h4>Stars:</h4>
+  <ul>
+    <li *ngFor="let star of constellation.Stars">
+      <app-star [star]="star"></app-star>
+    </li>
+  </ul>
+  <br>
+</ng-container>
