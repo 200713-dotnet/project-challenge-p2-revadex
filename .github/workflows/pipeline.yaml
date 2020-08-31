@@ -163,6 +163,22 @@ jobs:
       - run: docker image push jfantauzzi/mvc2020
       - run: docker logout
 
+# DEPLOY
+deploy_angular:
+  env:
+    AZURE_LOGIN: ${{ secrets.AZURE_LOGIN }}
+    AZURE_TENANT: ${{ secrets.AZURE_TENANT }}
+    AZURE_TOKEN: ${{ secrets.AZURE_TOKEN }}
+  needs: pack_angular
+  runs-on: ubuntu-20.04
+  steps:
+    - uses: actions/checkout@v2
+    - run: az login --service-principal --username ${AZURE_LOGIN} --password ${AZURE_TOKEN} --tenant ${AZURE_TENANT}
+    - run: az aks get-credentials --name stardexaks2020 --resource-group stardexaks --admin
+    - run: kubectl apply --filename ./.kubernetes/angular
+    - run: kubectl rollout restart --filename ./.kubernetes/angular/k8s_deployment.yaml
+    - run: az logout
+     
 name: pipeline
     
 on: push
