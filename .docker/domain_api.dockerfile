@@ -1,5 +1,5 @@
 # DOMAIN SERVICE DOCKERFILE
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build
 WORKDIR /workspace
 COPY . . 
 RUN dotnet publish -c Release -o out Domain.Service/DomainService.Client/*.csproj
