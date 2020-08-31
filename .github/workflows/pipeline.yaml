@@ -1,0 +1,152 @@
+jobs:
+  # BUILD
+  build_angular:
+    defaults:
+      run:
+        working-directory: StarDex.AngularClient/ #does it need to be in ng10 folder
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci #clean-install
+      - run: npm run build
+      - run: npm run lint
+
+  build_img_api:
+    defaults:
+      run:
+        working-directory: Image.Service/
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+  
+  build_domain_api:
+    defaults:
+      run:
+        working-directory: Domain.Service/
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+
+  build_mvc:
+    defaults:
+      run:
+        working-directory: StarDex.MVCClient/
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+
+  # TEST
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet test Domain.Service/DomainService.Testing/*.csproj
+      - run: dotnet test Image.Service/Image.Testing/*.csproj
+
+  # ANALYZE
+  analyze_image_api:
+    needs: [build_img_api, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscanner
+      - run: |
+          dotnet sonarscanner begin -o:'jpchionglo' -k:'revadeximageservice' -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}' -d:sonar.host.url='https://sonarcloud.io'
+          dotnet build Image.Service/ImageService.sln
+          dotnet test Image.Service/Image.Testing/*.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+          dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  analyze_domain_api:
+    needs: [build_domain_api, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscanner
+      - run: |
+          dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexdomainservice' -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}' -d:sonar.host.url='https://sonarcloud.io'
+          dotnet build Domain.Service/DomainService.sln
+          dotnet test Domain.Service/DomainService.Testing/*.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+          dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  analyze_mvc:
+    needs: [build_mvc, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscanner
+      - run: |
+          dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexstardexclient' -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}' -d:sonar.host.url='https://sonarcloud.io/'
+          dotnet build StarDex.MVCClient/StarDexClient.sln
+          dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}'
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                 
+  # PACK
+  pack_angular:
+    defaults:
+      run:
+        working-directory: StarDex.AngularClient/
+    runs-on: ubuntu-20.04
+    steps:
+        - uses: actions/checkout@v2
+        - run: docker login
+        - run: docker image build -f .docker/AngularClient.dockerfile -t angular .
+        - run: docker image tag angular jacobfantauzzi/ng2020
+        - run: docker image push jacobfantauzzi/ng2020
+        - run: docker logout
+
+  pack_image_api:
+    defaults:
+      run:
+        working-directory: Image.Service/
+    runs-on: ubuntu-20.04
+    steps:
+        - uses: actions/checkout@v2
+        - run: docker login
+        - run: docker image build -f .docker/image_api.dockerfile -t image_api .
+        - run: docker image tag image_api jacobfantauzzi/imageapi2020
+        - run: docker image push jacobfantauzzi/imageapi2020
+        - run: docker logout
+  
+  pack_domain_api:
+    defaults:
+      run:
+        working-directory: Domain.Service/
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker login
+      - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
+      - run: docker image tag domain_api jacobfantauzzi/domainapi2020
+      - run: docker image push jacobfantauzzi/domainapi2020
+      - run: docker logout
+
+  pack_mvc:
+    defaults:
+      run:
+        working-directory: StarDex.MvcClient/
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker login
+      - run: docker image build -f .docker/MvcClient.dockerfile -t mvc .
+      - run: docker image tag mvc jacobfantauzzi/mvc2020
+      - run: docker image push jacobfantauzzi/mvc2020
+      - run: docker logout
+
+name: pipeline
+    
+on: push
