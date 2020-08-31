@@ -72,26 +72,26 @@ jobs:
       run:
         working-directory: Domain.Service
       runs-on: ubuntu 20.04
-      steps:
-        - uses: actions/checkout@v2
-        - run: docker login
-        - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
-        - run: docker image tag domain_api jacobfantauzzi/domainapi2020
-        - run: docker image push jacobfantauzzi/domainapi2020
-        - run: docker logout
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker login
+      - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
+      - run: docker image tag domain_api jacobfantauzzi/domainapi2020
+      - run: docker image push jacobfantauzzi/domainapi2020
+      - run: docker logout
 
   pack_domain_service:
     defaults:
       run:
         working-directory: --
       runs-on: ubuntu 20.04
-      steps:
-        - uses: actions/checkout@v2
-        - run: docker login
-        - run: docker image build -f .docker/image_api.dockerfile -t image_api .
-        - run: docker image tag image_api jacobfantauzzi/imageapi2020
-        - run: docker image push jacobfantauzzi/imageapi2020
-        - run: docker logout
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker login
+      - run: docker image build -f .docker/image_api.dockerfile -t image_api .
+      - run: docker image tag image_api jacobfantauzzi/imageapi2020
+      - run: docker image push jacobfantauzzi/imageapi2020
+      - run: docker logout
 
 name: pipeline
     
