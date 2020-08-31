@@ -1,5 +1,5 @@
 jobs:
-  
+
   build_image:
     defaults:
       run:
@@ -42,7 +42,7 @@ jobs:
       - run: npm run lint
 
   analyze:
-    needs: [build, test]
+    needs: [build_angular, build_domain, build_image, build_mvc]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2.3.1
