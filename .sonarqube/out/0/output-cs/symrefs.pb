@@ -1,105 +1,191 @@
-¯
-ˆ/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Factories/IFactory.cs
+¼
+b/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/ConstellationController.cs
 
- 
+
+
+ &
 
-		 
+ *
+$ (
+‚ †%% --n r
+  ""# -(
+ % ,-- //% ,d
+      '// 00 11 '88 
+ % &
+ 8 >
+ $ 
+"" && #)) "(
+$$ "** 33 ;;# (
+)) **: >
+11 228 >
+22 $33 #
+77 88% &Ÿ
+Y/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/HomeController.cs
+  +" 0
+- 4 
++ 6  
+" /  #
 
-		 Ç
-Œ/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Factories/SpaceFactory.cs
+ 
+2 8 
 
- 
+ 
+# . 
+00 ' #(
+    
+ $$ ))" ,
+   !!: A
+!! %"" '
+"" ##8 >
+## $$$ 
+((% 3++ -- 
+)) ** $*
+** ++H M++f k
+++„ ‰
+11 66 ;;" ,
+22 33: A
+33 %44 '
+44 558 >
+55 $66 
+:: #== ?? 
+;; << $(
+<< ==8 ===V [==t y
 
-		 
-		  !
-   
-/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs
+BB  
 
- 
+GG „
+[/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/PlanetController.cs
 
- 
-$ () -
+
+
+ !
 
- 
-- :) 6
+ 
+& *	} p t
+  O Y(
+ < C < C
+ '! )
+ : @
+  & !
+   #
+ '! )
+ : @
+  & %¹
+Y/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/StarController.cs
 
- 
-& ,) /
+		 
 
- 
-+ 6) 4
+ 2
+& *{ 9 =%%p t))9 =
+ !! $$L V(
+ ' .%% ''' .d
+  
+ 
+   0 8 '''
+ -- '33 
+ ' (2
+     $
+   8 >
+   $!! 
+$$ // 44 "
+)) **
+ ++ $
+-- ..8 >
+.. $// $
+^/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ConstellationButtonModel.cs
 
-## 
-##* /%%) .
+ '
 
-)) 
-))3 A++) 7
+ 
 
-// 
-//, 311) 0
+ 
 
-55 
-551 =77) 5ª
-ƒ/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/AModel.cs
+ š
+\/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ConstellationViewModel.cs
 
- 
+ %
 
- 
+ 
 
-		 Ì
-/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs
+ 
 
- #
- " 
+ 
 
- 
+ $„
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs
 
- Ç
-ˆ/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/PlanetModel.cs
+ 
+ 		; D
 
- 
+		 !…
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/HomeViewModel.cs
 
-		 
+ 
 
- 
+* /
 
- 
+! (
 
- Ç
-”/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/PlanetSolarSystJunction.cs
+ Ã
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs
 
- (
+ 
 
-		 
+ 
 
- 
+ 
 
- )Ê
-/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs
+ 
 
- !
- & 
+ 
 
- 
+ 
 
- Á
-Ž/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarConstJunction.cs
+ 
 
- "
+		 
 
-		 
+
+
+ µ
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/StarViewModel.cs
 
- 
+ 
 
-  -Å
-†/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarModel.cs
+ 
 
- 
+ 
 
-		 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
+
+		  ¸
+F/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Program.cs
+
+ 
+
+ 
+) - "
+# 4 
+> B& *
+* 4 Â
+F/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Startup.cs
+
+ 
+
+ 
+& 3 )
+ + 
+
+ %
+9 A 
+
+ Z
+2 5"" && (( ** ++ -- // 11 
+K N   
+11 &33 

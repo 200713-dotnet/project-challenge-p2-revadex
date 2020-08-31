@@ -1,19 +1,46 @@
 jobs:
   
-  build:
+  build_image:
+    defaults:
+      run:
+        working-directory: Image.Service/
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.1
-      - run: dotnet build StarDex.Client/StarDex.Client.csproj
-      - run: dotnet build Domain.Service/DomainService.sln
-      - run: dotnet build Image.Service/ImageService.sln
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
 
-  test:
+  build_domain:
+    defaults:
+      run:
+        working-directory: Domain.Service/
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2.3.1
-      - run: dotnet test Domain.Service/DomainService.Testing/DomainService.Testing.csproj
-      - run: dotnet test Image.Service/Image.Testing/Image.Testing.csproj
+      - uses: actions/checkout@v2
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+
+  build_mvc:
+    defaults:
+      run:
+        working-directory: StarDex.MVCClient/
+    test:
+      runs-on: ubuntu-20.04
+      steps:
+        - uses: actions/checkout@v2
+        - run: dotnet restore
+        - run: dotnet build --no-restore
+
+  build_angular:
+    defaults:
+      run:
+        working-directory: StarDex.AngularClient/
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm run build
+      - run: npm run lint
 
   analyze:
     needs: [build, test]
@@ -38,7 +65,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |   
           dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexstardexclient' -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}' -d:sonar.host.url='https://sonarcloud.io/'
-          dotnet build StarDex.Client/StarDex.Client.csproj
+          dotnet build StarDex.MVCClient/StarDex.Client/StarDex.Client.csproj
           dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}'
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,17 +1,15 @@
 
-5DomainService.Domain.Models.StarModel.Description.set‘
-†/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarModel.cs% (("0*Ó
-0ò
-ï
-‘
-†/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarModel.cs% ()@'
-%DomainService.Domain.Models.StarModel"
-Descriptionstring"__id*
-
-valuestring"Ø
-‘
-†/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarModel.cs% ()B*@'
-%DomainService.Domain.Models.StarModel"
-Descriptionstring:
-valuestringB)'
-%DomainService.Domain.Models.StarModel
+.StarDex.Client.Models.PlanetViewModel.Mass.get_
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs ("0*®
+0µ
+²
+_
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs (
+%0double"__id*;*9'
+%StarDex.Client.Models.PlanetViewModel"
+Massdouble"q
+_
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs (
+
+%0doubleB)'
+%StarDex.Client.Models.PlanetViewModel
