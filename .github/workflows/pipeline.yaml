@@ -124,7 +124,7 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
-        - run: docker image build -f .docker/image_api.dockerfile -t image_api .
+        - run: docker image build -f ../.docker/image_api.dockerfile -t image_api .
         - run: docker image tag image_api jfantauzzi/imageapi2020
         - run: docker image push jfantauzzi/imageapi2020
         - run: docker logout
@@ -141,7 +141,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
-      - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
+      - run: docker image build -f ../.docker/domain_api.dockerfile -t domain_api .
       - run: docker image tag domain_api jfantauzzi/domainapi2020
       - run: docker image push jfantauzzi/domainapi2020
       - run: docker logout
@@ -158,7 +158,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
-      - run: docker image build -f .docker/MvcClient.dockerfile -t mvc .
+      - run: docker image build -f ../.docker/MvcClient.dockerfile -t mvc .
       - run: docker image tag mvc jfantauzzi/mvc2020
       - run: docker image push jfantauzzi/mvc2020
       - run: docker logout
