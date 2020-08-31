@@ -45,11 +45,11 @@ jobs:
     defaults:
       run:
         working-directory: StarDex.AngularClient/
-      runs-on: ubuntu 20.04
-      steps:
+    runs-on: ubuntu 20.04
+    steps:
         - uses: actions/checkout@v2
         - run: docker login
-        - run: docker image build -f .docker/stardex.dockerfile -t angular .
+        - run: docker image build -f .docker/AngularClient.dockerfile -t angular .
         - run: docker image tag angular jacobfantauzzi/ng2020
         - run: docker image push jacobfantauzzi/ng2020
         - run: docker logout
@@ -58,8 +58,8 @@ jobs:
     defaults:
       run:
         working-directory: Image.Service/
-      runs-on: ubuntu 20.04
-      steps:
+    runs-on: ubuntu 20.04
+    steps:
         - uses: actions/checkout@v2
         - run: docker login
         - run: docker image build -f .docker/image_api.dockerfile -t image_api .
@@ -80,17 +80,17 @@ jobs:
       - run: docker image push jacobfantauzzi/domainapi2020
       - run: docker logout
 
-  pack_domain_service:
+  pack_mvc:
     defaults:
       run:
         working-directory: --
-      runs-on: ubuntu 20.04
+    runs-on: ubuntu 20.04
     steps:
       - uses: actions/checkout@v2
       - run: docker login
-      - run: docker image build -f .docker/image_api.dockerfile -t image_api .
-      - run: docker image tag image_api jacobfantauzzi/imageapi2020
-      - run: docker image push jacobfantauzzi/imageapi2020
+      - run: docker image build -f .docker/MvcClient.dockerfile -t mvc .
+      - run: docker image tag mvc jacobfantauzzi/mvc2020
+      - run: docker image push jacobfantauzzi/mvc2020
       - run: docker logout
 
 name: pipeline
