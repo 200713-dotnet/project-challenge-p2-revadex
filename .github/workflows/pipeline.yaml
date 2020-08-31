@@ -31,10 +31,10 @@ jobs:
       - run: dotnet restore
       - run: dotnet build --no-restore
 
-  build_aspnet_mvc:
+  build_mvc:
     defaults:
       run:
-        working-directory: StarDex.Client/
+        working-directory: StarDex.MVCClient/
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -49,6 +49,53 @@ jobs:
       - run: dotnet test Domain.Service/DomainService.Testing/*.csproj
       - run: dotnet test Image.Service/Image.Testing/*.csproj
 
+  # ANALYZE
+
+
+  analyze_image_api:
+    needs: [build_img_api, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscannar
+      - run: |
+          dotnet sonarscannar begin -o:'jpchionglo' -k:'revadeximageservice' -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}' -d:sonar.host.url='https://sonarcloud.io'
+          dotnet build Image.Service/ImageService.sln
+          dotnet test Image.Service/Image.Testing/*.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+          dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  analyze_domain_api:
+    needs: [build_domain_api, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscannar
+      - run: |
+          dotnet sonarscannar begin -o:'jpchionglo' -k:'revadexdomainservice' -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}' -d:sonar.host.url='https://sonarcloud.io'
+          dotnet build Domain.Service/DomainService.sln
+          dotnet test Domain.Service/DomainService.Testing/*.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+          dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  analyze_mvc:
+    needs: [build_mvc, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscannar
+      - run: |
+          dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexstardexclient' -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}' -d:sonar.host.url='https://sonarcloud.io/'
+          dotnet build StarDex.MVCClient/StarDexClient.sln
+          dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}'
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                 
   # PACK
   pack_angular:
     defaults:
@@ -63,7 +110,7 @@ jobs:
         - run: docker image push jacobfantauzzi/ng2020
         - run: docker logout
 
-  pack_image_service:
+  pack_image_api:
     defaults:
       run:
         working-directory: Image.Service/
@@ -76,10 +123,10 @@ jobs:
         - run: docker image push jacobfantauzzi/imageapi2020
         - run: docker logout
   
-  pack_domain_service:
+  pack_domain_api:
     defaults:
       run:
-        working-directory: Domain.Service
+        working-directory: Domain.Service/
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -92,7 +139,7 @@ jobs:
   pack_mvc:
     defaults:
       run:
-        working-directory: --
+        working-directory: StarDex.MvcClient/
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
