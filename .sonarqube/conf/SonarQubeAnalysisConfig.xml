@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <SonarConfigDir>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf</SonarConfigDir>
-  <SonarOutputDir>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/out</SonarOutputDir>
-  <SonarBinDir>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/bin</SonarBinDir>
-  <SonarScannerWorkingDirectory>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex</SonarScannerWorkingDirectory>
+  <SonarConfigDir>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf</SonarConfigDir>
+  <SonarOutputDir>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/out</SonarOutputDir>
+  <SonarBinDir>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/bin</SonarBinDir>
+  <SonarScannerWorkingDirectory>/home/jchionglo/project-challenge-p2-revadex</SonarScannerWorkingDirectory>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
-  <SonarQubeHostUrl>https://sonarcloud.io</SonarQubeHostUrl>
-  <SonarQubeVersion>8.0.0.11122</SonarQubeVersion>
-  <SonarProjectKey>revadex</SonarProjectKey>
+  <SonarQubeHostUrl>https://sonarcloud.io/</SonarQubeHostUrl>
+  <SonarQubeVersion>8.0.0.11367</SonarQubeVersion>
+  <SonarProjectKey>revadexstardexclient</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
@@ -15,8 +15,8 @@
   </AdditionalConfig>
   <ServerSettings>
     <Property Name="sonar.project.monorepo.enabled">false</Property>
-    <Property Name="sonaranalyzer-cs.nuget.packageVersion">8.11.0.20529</Property>
-    <Property Name="sonaranalyzer.security.cs.pluginVersion">8.5.0-M1.3491</Property>
+    <Property Name="sonaranalyzer-cs.nuget.packageVersion">8.12.0.21095</Property>
+    <Property Name="sonaranalyzer.security.cs.pluginVersion">8.5.0-M2.3931</Property>
     <Property Name="sonar.cs.ignoreHeaderComments">true</Property>
     <Property Name="sonar.c.file.suffixes">.c,.h</Property>
     <Property Name="sonar.typescript.file.suffixes">.ts,.tsx</Property>
@@ -29,7 +29,7 @@
     <Property Name="sonar.forceAuthentication">false</Property>
     <Property Name="sonar.notifications.delay">60</Property>
     <Property Name="sonar.cpp.file.suffixes">.cc,.cpp,.cxx,.c++,.hh,.hpp,.hxx,.h++,.ipp</Property>
-    <Property Name="sonaranalyzer.security.cs.nuget.packageVersion">8.5.0-M1.3491</Property>
+    <Property Name="sonaranalyzer.security.cs.nuget.packageVersion">8.5.0-M2.3931</Property>
     <Property Name="sonaranalyzer-cs.ruleNamespace">SonarAnalyzer.CSharp</Property>
     <Property Name="sonar.cs.analyzeGeneratedCode">false</Property>
     <Property Name="sonar.builtInQualityProfiles.disableNotificationOnUpdate">false</Property>
@@ -65,7 +65,7 @@
     <Property Name="sonar.plsql.file.suffixes">sql,tab,pkb</Property>
     <Property Name="sonaranalyzer.security.cs.ruleNamespace">SonarAnalyzer.Security</Property>
     <Property Name="sonar.cobol.tab.width">8</Property>
-    <Property Name="sonaranalyzer-vbnet.staticResourceName">SonarAnalyzer-8.11.0.20529.zip</Property>
+    <Property Name="sonaranalyzer-vbnet.staticResourceName">SonarAnalyzer-8.12.0.21095.zip</Property>
     <Property Name="sonar.java.file.suffixes">.java,.jav</Property>
     <Property Name="sonar.kotlin.file.suffixes">.kt</Property>
     <Property Name="sonar.php.file.suffixes">php,php3,php4,php5,phtml,inc</Property>
@@ -73,7 +73,7 @@
     <Property Name="sonar.dbcleaner.weeksBeforeDeletingAllSnapshots">480</Property>
     <Property Name="sonar.python.coverage.reportPaths">coverage-reports/*coverage-*.xml</Property>
     <Property Name="sonar.javascript.jQueryObjectAliases">$, jQuery</Property>
-    <Property Name="sonaranalyzer-vbnet.nuget.packageVersion">8.11.0.20529</Property>
+    <Property Name="sonaranalyzer-vbnet.nuget.packageVersion">8.12.0.21095</Property>
     <Property Name="sonar.go.file.suffixes">.go</Property>
     <Property Name="sonar.cpd.cobol.minimumLines">30</Property>
     <Property Name="sonar.cobol.exec.recoveryMode">true</Property>
@@ -91,7 +91,7 @@
     <Property Name="sonar.auth.bitbucket.enabled">true</Property>
     <Property Name="sonaranalyzer-vbnet.nuget.packageId">SonarAnalyzer.VisualBasic</Property>
     <Property Name="email.from">noreply@sonarcloud.io</Property>
-    <Property Name="sonaranalyzer-vbnet.pluginVersion">8.11.0.20529</Property>
+    <Property Name="sonaranalyzer-vbnet.pluginVersion">8.12.0.21095</Property>
     <Property Name="sonar.internal.analysis.failFast">false</Property>
     <Property Name="sonaranalyzer.security.cs.analyzerId">SonarAnalyzer.Security</Property>
     <Property Name="sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek">1</Property>
@@ -105,7 +105,7 @@
     <Property Name="sonar.objc.file.suffixes">.m</Property>
     <Property Name="sonar.autoscan.enabled">false</Property>
     <Property Name="sonar.ruby.coverage.reportPaths">coverage/.resultset.json</Property>
-    <Property Name="sonaranalyzer-cs.staticResourceName">SonarAnalyzer-8.11.0.20529.zip</Property>
+    <Property Name="sonaranalyzer-cs.staticResourceName">SonarAnalyzer-8.12.0.21095.zip</Property>
     <Property Name="sonar.cpd.cobol.ignoreLiteral">true</Property>
     <Property Name="sonaranalyzer-cs.nuget.packageId">SonarAnalyzer.CSharp</Property>
     <Property Name="sonar.authenticator.downcase">false</Property>
@@ -113,8 +113,8 @@
     <Property Name="sonar.organizations.anyoneCanCreate">true</Property>
     <Property Name="sonar.technicalDebt.ratingGrid">0.05,0.1,0.2,0.5</Property>
     <Property Name="sonar.lf.enableGravatar">true</Property>
-    <Property Name="sonaranalyzer-cs.pluginVersion">8.11.0.20529</Property>
-    <Property Name="sonaranalyzer.security.cs.staticResourceName">SonarAnalyzer.Security-8.5.0-M1.3491.zip</Property>
+    <Property Name="sonaranalyzer-cs.pluginVersion">8.12.0.21095</Property>
+    <Property Name="sonaranalyzer.security.cs.staticResourceName">SonarAnalyzer.Security-8.5.0-M2.3931.zip</Property>
     <Property Name="sonar.javascript.file.suffixes">.js,.jsx,.vue</Property>
     <Property Name="sonar.cpd.abap.minimumLines">20</Property>
     <Property Name="sonar.vbnet.analyzeGeneratedCode">false</Property>
@@ -123,68 +123,68 @@
     <Property Name="sonar.core.serverBaseURL">https://sonarcloud.io</Property>
     <Property Name="sonar.lf.logoWidthPx">105</Property>
     <Property Name="sonar.core.id">1BD809FA-AWHW8ct9-T_TB3XqouNu</Property>
-    <Property Name="sonar.core.startTime">08/24/2020 05:37:05</Property>
+    <Property Name="sonar.core.startTime">08/28/2020 07:22:12</Property>
   </ServerSettings>
   <LocalSettings>
-    <Property Name="sonar.host.url">https://sonarcloud.io</Property>
+    <Property Name="sonar.host.url">https://sonarcloud.io/</Property>
     <Property Name="sonar.organization">jpchionglo</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
-      <RuleSetFilePath>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-cs.ruleset</RuleSetFilePath>
-      <TestProjectRuleSetFilePath>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-cs-test.ruleset</TestProjectRuleSetFilePath>
+      <RuleSetFilePath>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-cs.ruleset</RuleSetFilePath>
+      <TestProjectRuleSetFilePath>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-cs-test.ruleset</TestProjectRuleSetFilePath>
       <AnalyzerPlugins>
-        <AnalyzerPlugin Key="csharp" Version="8.11.0.20529" StaticResourceName="SonarAnalyzer-8.11.0.20529.zip">
+        <AnalyzerPlugin Key="csharp" Version="8.12.0.21095" StaticResourceName="SonarAnalyzer-8.12.0.21095.zip">
           <AssemblyPaths>
-            <Path>/tmp/.sonarqube/resources/0/SonarAnalyzer.CSharp.dll</Path>
-            <Path>/tmp/.sonarqube/resources/0/Google.Protobuf.dll</Path>
-            <Path>/tmp/.sonarqube/resources/0/SonarAnalyzer.dll</Path>
-            <Path>/tmp/.sonarqube/resources/0/SonarAnalyzer.CFG.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/SonarAnalyzer.CSharp.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/Google.Protobuf.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/SonarAnalyzer.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/SonarAnalyzer.CFG.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
-        <AnalyzerPlugin Key="vbnet" Version="8.11.0.20529" StaticResourceName="SonarAnalyzer-8.11.0.20529.zip">
+        <AnalyzerPlugin Key="vbnet" Version="8.12.0.21095" StaticResourceName="SonarAnalyzer-8.12.0.21095.zip">
           <AssemblyPaths>
-            <Path>/tmp/.sonarqube/resources/1/Google.Protobuf.dll</Path>
-            <Path>/tmp/.sonarqube/resources/1/SonarAnalyzer.dll</Path>
-            <Path>/tmp/.sonarqube/resources/1/SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>/tmp/.sonarqube/resources/4/Google.Protobuf.dll</Path>
+            <Path>/tmp/.sonarqube/resources/4/SonarAnalyzer.dll</Path>
+            <Path>/tmp/.sonarqube/resources/4/SonarAnalyzer.VisualBasic.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
-        <AnalyzerPlugin Key="securitycsharpfrontend" Version="8.5.0-M1.3491" StaticResourceName="SonarAnalyzer.Security-8.5.0-M1.3491.zip">
+        <AnalyzerPlugin Key="securitycsharpfrontend" Version="8.5.0-M2.3931" StaticResourceName="SonarAnalyzer.Security-8.5.0-M2.3931.zip">
           <AssemblyPaths>
-            <Path>/tmp/.sonarqube/resources/2/Microsoft.AspNetCore.Razor.Language.dll</Path>
-            <Path>/tmp/.sonarqube/resources/2/SonarAnalyzer.Security.dll</Path>
-            <Path>/tmp/.sonarqube/resources/2/Google.Protobuf.dll</Path>
+            <Path>/tmp/.sonarqube/resources/5/Microsoft.AspNetCore.Razor.Language.dll</Path>
+            <Path>/tmp/.sonarqube/resources/5/SonarAnalyzer.Security.dll</Path>
+            <Path>/tmp/.sonarqube/resources/5/Google.Protobuf.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf/cs/SonarLint.xml</Path>
+        <Path>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf/cs/SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
     <AnalyzerSettings>
       <Language>vbnet</Language>
-      <RuleSetFilePath>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-vbnet.ruleset</RuleSetFilePath>
-      <TestProjectRuleSetFilePath>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-vbnet-test.ruleset</TestProjectRuleSetFilePath>
+      <RuleSetFilePath>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-vbnet.ruleset</RuleSetFilePath>
+      <TestProjectRuleSetFilePath>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf/SonarQubeRoslyn-vbnet-test.ruleset</TestProjectRuleSetFilePath>
       <AnalyzerPlugins>
-        <AnalyzerPlugin Key="csharp" Version="8.11.0.20529" StaticResourceName="SonarAnalyzer-8.11.0.20529.zip">
+        <AnalyzerPlugin Key="csharp" Version="8.12.0.21095" StaticResourceName="SonarAnalyzer-8.12.0.21095.zip">
           <AssemblyPaths>
-            <Path>/tmp/.sonarqube/resources/0/SonarAnalyzer.CSharp.dll</Path>
-            <Path>/tmp/.sonarqube/resources/0/Google.Protobuf.dll</Path>
-            <Path>/tmp/.sonarqube/resources/0/SonarAnalyzer.dll</Path>
-            <Path>/tmp/.sonarqube/resources/0/SonarAnalyzer.CFG.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/SonarAnalyzer.CSharp.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/Google.Protobuf.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/SonarAnalyzer.dll</Path>
+            <Path>/tmp/.sonarqube/resources/3/SonarAnalyzer.CFG.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
-        <AnalyzerPlugin Key="vbnet" Version="8.11.0.20529" StaticResourceName="SonarAnalyzer-8.11.0.20529.zip">
+        <AnalyzerPlugin Key="vbnet" Version="8.12.0.21095" StaticResourceName="SonarAnalyzer-8.12.0.21095.zip">
           <AssemblyPaths>
-            <Path>/tmp/.sonarqube/resources/1/Google.Protobuf.dll</Path>
-            <Path>/tmp/.sonarqube/resources/1/SonarAnalyzer.dll</Path>
-            <Path>/tmp/.sonarqube/resources/1/SonarAnalyzer.VisualBasic.dll</Path>
+            <Path>/tmp/.sonarqube/resources/4/Google.Protobuf.dll</Path>
+            <Path>/tmp/.sonarqube/resources/4/SonarAnalyzer.dll</Path>
+            <Path>/tmp/.sonarqube/resources/4/SonarAnalyzer.VisualBasic.dll</Path>
           </AssemblyPaths>
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/.sonarqube/conf/vbnet/SonarLint.xml</Path>
+        <Path>/home/jchionglo/project-challenge-p2-revadex/.sonarqube/conf/vbnet/SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
   </AnalyzersSettings>

@@ -1,15 +1,24 @@
 
-8DomainService.Domain.Models.ConstellationModel.Stars.getö
-è/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs$ ('"0*Ö
-0≥
-∞
-ö
-è/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs$ (((
-%0"System.Collections.Generic.List<T>"__id*a*_0
-.DomainService.Domain.Models.ConstellationModel"+
-Stars"System.Collections.Generic.List<T>"…
-ö
-è/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs$ ((*
-(
-%0"System.Collections.Generic.List<T>B20
-.DomainService.Domain.Models.ConstellationModel
+6StarDex.Client.Models.ErrorViewModel.ShowRequestId.get^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs	 	(!"0*á
+0œ
+Ã
+^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs	; 	(D
+%0string"2StarDex.Client.Models.ErrorViewModel.RequestId.get*(&
+$StarDex.Client.Models.ErrorViewModel™
+ß
+^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs	& 	(E
+
+%1bool"string.IsNullOrEmpty(string?)*
+"
+string*
+
+%0string*
+1*z
+1"u
+^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs	E 	(F
+implicit returnB(&
+$StarDex.Client.Models.ErrorViewModel

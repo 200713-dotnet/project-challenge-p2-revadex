@@ -1,28 +1,17 @@
 
-?DomainService.Domain.Models.SolarSystemModel.SolarSystemModel()ò
-ç/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs ("0*¿
-0ÏÈ
-ò
-ç/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs ()(
-%0"System.Collections.Generic.List<T>""System.Collections.Generic.List<T>Å
-˛
-ò
-ç/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs ('
-
-%1void")System.Collections.Generic.List<T>.List()**
-(
-%0"System.Collections.Generic.List<T>¬
-ø
-ò
-ç/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs ()
-
-%2void"8DomainService.Domain.Models.SolarSystemModel.Planets.set*0.
-,DomainService.Domain.Models.SolarSystemModel**
-(
-%0"System.Collections.Generic.List<T>*
-1*∂
-1"∞
-ò
-ç/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs (
-implicit returnB0.
-,DomainService.Domain.Models.SolarSystemModel
+,StarDex.Client.Models.HomeViewModel.name.set]
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/HomeViewModel.cs (!"0*◊
+0¥
+±
+]
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/HomeViewModel.cs ("7%
+#StarDex.Client.Models.HomeViewModel"
+namestring"__id*
+
+valuestring"ö
+]
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/HomeViewModel.cs ("9*7%
+#StarDex.Client.Models.HomeViewModel"
+namestring:
+valuestringB'%
+#StarDex.Client.Models.HomeViewModel

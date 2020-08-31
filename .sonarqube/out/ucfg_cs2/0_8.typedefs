@@ -1,9 +1,7 @@
-≈
--DomainService.Domain.Models.StarConstJunctionobjectX
-StarConstJunction()ADomainService.Domain.Models.StarConstJunction.StarConstJunction()>
-Id.get4DomainService.Domain.Models.StarConstJunction.Id.get>
-Id.set4DomainService.Domain.Models.StarConstJunction.Id.setB
-Star.get6DomainService.Domain.Models.StarConstJunction.Star.getB
-Star.set6DomainService.Domain.Models.StarConstJunction.Star.setT
-Constellation.get?DomainService.Domain.Models.StarConstJunction.Constellation.getT
-Constellation.set?DomainService.Domain.Models.StarConstJunction.Constellation.set
+„
+StarDex.Client.Startupobjectè
+:Startup(Microsoft.Extensions.Configuration.IConfiguration)QStarDex.Client.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)∑
+NConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)eStarDex.Client.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)ˆ
+mConfigure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)ÑStarDex.Client.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostEnvironment)=
+Configuration.get(StarDex.Client.Startup.Configuration.get=
+Configuration.set(StarDex.Client.Startup.Configuration.set

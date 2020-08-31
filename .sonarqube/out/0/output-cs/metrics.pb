@@ -1,14 +1,23 @@
-ó
-à/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Factories/IFactory.csr	≥
-å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Factories/SpaceFactory.cs 8r	
-xÇ∫
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs 8r!	!#%')+-/13579;=Ç%+17ñ
-É/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/AModel.cs 8r	Ø
-è/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs 8r	Çû
-à/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/PlanetModel.cs 8r	©
-î/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/PlanetSolarSystJunction.cs 8r
-	≠
-ç/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/SolarSystemModel.cs 8r	Ç£
-é/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarConstJunction.cs 8r
-	ú
-Ü/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/StarModel.cs 8r	
+ƒ
+b/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/ConstellationController.cs 8jr9	
+ !"$%&'()*+-./0123456789;<=>xÇ")*-/01238;»
+Y/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/HomeController.cs 8
+rD	 !"#$%&'()*+,-.0123456789:;<=>?@BCDFGHIJKxÇ !"#$)*+-23456;<=?CHó
+[/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/PlanetController.cs 8r!	
+ !"Çµ
+Y/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Controllers/StarController.cs 8r5	
+ !"#$%&'()*+,-./0134567x	Ç !$%'*+-./34o
+^/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ConstellationButtonModel.cs 8ro
+\/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ConstellationViewModel.cs 8r		
+k
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs 8r		
+Ç	e
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/HomeViewModel.cs 8r	k
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs 8r	
+h
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/StarViewModel.cs 8r	
+q
+F/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Program.cs 8r
+Çó
+F/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Startup.cs 8j'r/	
+ !"#$%&()*+-/123456789xÇ "&(*+-/13

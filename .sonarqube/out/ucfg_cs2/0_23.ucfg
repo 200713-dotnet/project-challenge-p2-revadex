@@ -1,17 +1,17 @@
 
->DomainService.Domain.Models.ConstellationModel.Description.setš
-/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs% (("0*÷
-0„
-
-š
-/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs% ()I0
-.DomainService.Domain.Models.ConstellationModel"
-Descriptionstring"__id*
+3StarDex.Client.Models.StarViewModel.Temperature.set]
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/StarViewModel.cs% (("0*å
+0»
+¸
+]
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/StarViewModel.cs% ()>%
+#StarDex.Client.Models.StarViewModel"
+Temperaturedouble"__id*
 
-valuestring"ê
-š
-/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/Models/ConstellationModel.cs% ()K*I0
-.DomainService.Domain.Models.ConstellationModel"
-Descriptionstring:
-valuestringB20
-.DomainService.Domain.Models.ConstellationModel
+valuedouble"¡
+]
+S/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/StarViewModel.cs% ()@*>%
+#StarDex.Client.Models.StarViewModel"
+Temperaturedouble:
+valuedoubleB'%
+#StarDex.Client.Models.StarViewModel

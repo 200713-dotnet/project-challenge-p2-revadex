@@ -1,21 +1,21 @@
 
-QDomainService.Domain.JSONConvert.Convert(DomainService.Domain.Models.PlanetModel)å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs ("0*”
-0´
-®
-å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs (0
-%0string"3Newtonsoft.Json.JsonConvert.SerializeObject(object)*"
-Newtonsoft.Json.JsonConvert*3
-1
-planet'DomainService.Domain.Models.PlanetModel"ü
-å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs (1
+2StarDex.Client.Models.PlanetViewModel.ImageURL.get_
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs
+ 
+( "0*≤
+0π
+∂
+_
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs
+ 
+(!
+%0string"__id*?*='
+%StarDex.Client.Models.PlanetViewModel"
+ImageURLstring"q
+_
+U/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/PlanetViewModel.cs
+ 
+(!
 
-%0string*™
-1"§
-å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs (
-implicit return:1
-planet'DomainService.Domain.Models.PlanetModelB$"
- DomainService.Domain.JSONConvert
+%0stringB)'
+%StarDex.Client.Models.PlanetViewModel

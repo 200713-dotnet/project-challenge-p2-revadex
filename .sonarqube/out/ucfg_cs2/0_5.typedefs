@@ -1,4 +1,9 @@
-Ñ
-+DomainService.Domain.Factories.SpaceFactoryobjectL
-Create(string):DomainService.Domain.Factories.SpaceFactory.Create(string)L
-SpaceFactory():DomainService.Domain.Factories.SpaceFactory.SpaceFactory()
+»
+.StarDex.Client.Models.ConstellationButtonModelobjectg
+ConstellationButtonModel()IStarDex.Client.Models.ConstellationButtonModel.ConstellationButtonModel()C
+name.get7StarDex.Client.Models.ConstellationButtonModel.name.getC
+name.set7StarDex.Client.Models.ConstellationButtonModel.name.setA
+top.get6StarDex.Client.Models.ConstellationButtonModel.top.getA
+top.set6StarDex.Client.Models.ConstellationButtonModel.top.setC
+left.get7StarDex.Client.Models.ConstellationButtonModel.left.getC
+left.set7StarDex.Client.Models.ConstellationButtonModel.left.set

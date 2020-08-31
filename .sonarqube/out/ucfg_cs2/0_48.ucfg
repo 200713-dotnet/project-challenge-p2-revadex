@@ -1,21 +1,17 @@
 
-yDomainService.Domain.JSONConvert.Convert(System.Collections.Generic.List<DomainService.Domain.Models.ConstellationModel>)å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs) )("0*÷
-0Æ
-´
-å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs+ +(8
-%0string"3Newtonsoft.Json.JsonConvert.SerializeObject(object)*"
-Newtonsoft.Json.JsonConvert*6
-4
-constellations"System.Collections.Generic.List<T>"ü
-å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs+ +(9
-
-%0string*™
-1"§
-å
-Å/home/jchionglo/2007_13_dotnet/project-challenges/project-challenge-p2-revadex/Domain.Service/DomainService.Domain/JSONConvert.cs- -(
-implicit return:4
-constellations"System.Collections.Generic.List<T>B$"
- DomainService.Domain.JSONConvert
+2StarDex.Client.Models.ErrorViewModel.RequestId.set^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs' (*"0*Â
+0ª
+∏
+^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs' (+=&
+$StarDex.Client.Models.ErrorViewModel"
+	RequestIdstring"__id*
+
+valuestring"°
+^
+T/home/jchionglo/project-challenge-p2-revadex/StarDex.Client/Models/ErrorViewModel.cs' (+?*=&
+$StarDex.Client.Models.ErrorViewModel"
+	RequestIdstring:
+valuestringB(&
+$StarDex.Client.Models.ErrorViewModel

@@ -1,11 +1,11 @@
-€
- DomainService.Domain.JSONConvertobjectÅ
-.Convert(DomainService.Domain.Models.StarModel)ODomainService.Domain.JSONConvert.Convert(DomainService.Domain.Models.StarModel)ì
-7Convert(DomainService.Domain.Models.ConstellationModel)XDomainService.Domain.JSONConvert.Convert(DomainService.Domain.Models.ConstellationModel)Ö
-0Convert(DomainService.Domain.Models.PlanetModel)QDomainService.Domain.JSONConvert.Convert(DomainService.Domain.Models.PlanetModel)è
-5Convert(DomainService.Domain.Models.SolarSystemModel)VDomainService.Domain.JSONConvert.Convert(DomainService.Domain.Models.SolarSystemModel)√
-OConvert(System.Collections.Generic.List<DomainService.Domain.Models.StarModel>)pDomainService.Domain.JSONConvert.Convert(System.Collections.Generic.List<DomainService.Domain.Models.StarModel>)’
-XConvert(System.Collections.Generic.List<DomainService.Domain.Models.ConstellationModel>)yDomainService.Domain.JSONConvert.Convert(System.Collections.Generic.List<DomainService.Domain.Models.ConstellationModel>)«
-QConvert(System.Collections.Generic.List<DomainService.Domain.Models.PlanetModel>)rDomainService.Domain.JSONConvert.Convert(System.Collections.Generic.List<DomainService.Domain.Models.PlanetModel>)—
-VConvert(System.Collections.Generic.List<DomainService.Domain.Models.SolarSystemModel>)wDomainService.Domain.JSONConvert.Convert(System.Collections.Generic.List<DomainService.Domain.Models.SolarSystemModel>)?
-JSONConvert().DomainService.Domain.JSONConvert.JSONConvert()
+·
+,StarDex.Client.Models.ConstellationViewModelobjecta
+ConstellationViewModel()EStarDex.Client.Models.ConstellationViewModel.ConstellationViewModel()A
+name.get5StarDex.Client.Models.ConstellationViewModel.name.getA
+name.set5StarDex.Client.Models.ConstellationViewModel.name.setI
+imageURL.get9StarDex.Client.Models.ConstellationViewModel.imageURL.getI
+imageURL.set9StarDex.Client.Models.ConstellationViewModel.imageURL.setO
+description.get<StarDex.Client.Models.ConstellationViewModel.description.getO
+description.set<StarDex.Client.Models.ConstellationViewModel.description.setC
+	stars.get6StarDex.Client.Models.ConstellationViewModel.stars.getC
+	stars.set6StarDex.Client.Models.ConstellationViewModel.stars.set

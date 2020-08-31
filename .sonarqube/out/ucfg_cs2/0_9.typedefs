@@ -1,11 +1,8 @@
-½
-%DomainService.Domain.Models.StarModel"DomainService.Domain.Models.AModelobject@
-StarModel()1DomainService.Domain.Models.StarModel.StarModel()B
-Distance.get2DomainService.Domain.Models.StarModel.Distance.getB
-Distance.set2DomainService.Domain.Models.StarModel.Distance.setH
-Temperature.get5DomainService.Domain.Models.StarModel.Temperature.getH
-Temperature.set5DomainService.Domain.Models.StarModel.Temperature.set:
-Mass.get.DomainService.Domain.Models.StarModel.Mass.get:
-Mass.set.DomainService.Domain.Models.StarModel.Mass.setH
-Description.get5DomainService.Domain.Models.StarModel.Description.getH
-Description.set5DomainService.Domain.Models.StarModel.Description.set
+Ç
+)StarDex.Client.Controllers.HomeController#Microsoft.AspNetCore.Mvc.Controller'Microsoft.AspNetCore.Mvc.ControllerBaseobjectí
+_HomeController(Microsoft.Extensions.Logging.ILogger<StarDex.Client.Controllers.HomeController>)‰StarDex.Client.Controllers.HomeController.HomeController(Microsoft.Extensions.Logging.ILogger<StarDex.Client.Controllers.HomeController>)<
+Index()1StarDex.Client.Controllers.HomeController.Index()H
+StarButtons()7StarDex.Client.Controllers.HomeController.StarButtons()L
+PlanetButtons()9StarDex.Client.Controllers.HomeController.PlanetButtons()@
+	Privacy()3StarDex.Client.Controllers.HomeController.Privacy()<
+Error()1StarDex.Client.Controllers.HomeController.Error()
