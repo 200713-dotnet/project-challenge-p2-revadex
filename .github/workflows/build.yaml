@@ -64,7 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |   
           dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexstardexclient' -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}' -d:sonar.host.url='https://sonarcloud.io/'
-          dotnet build StarDex.MVCClient/StarDex.Client/StarDex.Client.csproj
+          dotnet build StarDex.MVCClient/StarDexClient.sln
           dotnet sonarscanner end -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}'
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
