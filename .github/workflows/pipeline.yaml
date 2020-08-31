@@ -58,7 +58,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git fetch --unshallow
-      - run: dotnet tool install --global dotnet-sonarscannar
+      - run: dotnet tool install --global dotnet-sonarscanner
       - run: |
           dotnet sonarscannar begin -o:'jpchionglo' -k:'revadeximageservice' -d:sonar.login='${{ secrets.SONARLOGINIMAGE }}' -d:sonar.host.url='https://sonarcloud.io'
           dotnet build Image.Service/ImageService.sln
@@ -73,7 +73,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git fetch --unshallow
-      - run: dotnet tool install --global dotnet-sonarscannar
+      - run: dotnet tool install --global dotnet-sonarscanner
       - run: |
           dotnet sonarscannar begin -o:'jpchionglo' -k:'revadexdomainservice' -d:sonar.login='${{ secrets.SONARLOGINDOMAIN }}' -d:sonar.host.url='https://sonarcloud.io'
           dotnet build Domain.Service/DomainService.sln
@@ -88,7 +88,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git fetch --unshallow
-      - run: dotnet tool install --global dotnet-sonarscannar
+      - run: dotnet tool install --global dotnet-sonarscanner
       - run: |
           dotnet sonarscanner begin -o:'jpchionglo' -k:'revadexstardexclient' -d:sonar.login='${{ secrets.SONARLOGINCLIENT }}' -d:sonar.host.url='https://sonarcloud.io/'
           dotnet build StarDex.MVCClient/StarDexClient.sln
