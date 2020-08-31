@@ -3,7 +3,7 @@ jobs:
   build_angular:
     defaults:
       run:
-        working-directory: Stardex.AngularClient/ #does it need to be in ng10 folder
+        working-directory: StarDex.AngularClient/ #does it need to be in ng10 folder
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
   build_aspnet_mvc:
     defaults:
       run:
-        working-directory: Stardex.Client/
+        working-directory: StarDex.Client/
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
