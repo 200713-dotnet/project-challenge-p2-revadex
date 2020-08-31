@@ -1,0 +1,13 @@
+---
+  kind: Service
+  apiVersion: v1
+  metadata:
+    name: aspnet-image
+  spec:
+    ports:
+      - name: aspnet-image
+        port: 80
+        targetPort: image-http
+    selector:
+      app: aspnet-image
+    type: LoadBalancer
