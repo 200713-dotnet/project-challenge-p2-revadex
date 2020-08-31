@@ -116,10 +116,14 @@ jobs:
     defaults:
       run:
         working-directory: Image.Service/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_img_api
     runs-on: ubuntu-20.04
     steps:
         - uses: actions/checkout@v2
-        - run: docker login
+        - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
         - run: docker image build -f .docker/image_api.dockerfile -t image_api .
         - run: docker image tag image_api jfantauzzi/imageapi2020
         - run: docker image push jfantauzzi/imageapi2020
@@ -129,10 +133,14 @@ jobs:
     defaults:
       run:
         working-directory: Domain.Service/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_domain_api
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: docker login
+      - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
       - run: docker image build -f .docker/domain_api.dockerfile -t domain_api .
       - run: docker image tag domain_api jfantauzzi/domainapi2020
       - run: docker image push jfantauzzi/domainapi2020
@@ -142,10 +150,14 @@ jobs:
     defaults:
       run:
         working-directory: StarDex.MvcClient/
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: build_mvc
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: docker login
+      - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
       - run: docker image build -f .docker/MvcClient.dockerfile -t mvc .
       - run: docker image tag mvc jfantauzzi/mvc2020
       - run: docker image push jfantauzzi/mvc2020
