@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /workspace
 COPY . . 
-RUN dotnet publish -c Release -o out Image.Service/*.sln
+RUN dotnet publish -c Release -o out Image.Service/ImageService.sln
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /workspace
