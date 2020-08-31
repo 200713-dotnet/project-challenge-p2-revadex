@@ -2,9 +2,7 @@
 
 ## project
 
-As a Team, please submit a project description in a marketing/business proposal style.
-It should be no longer than 10 sentences and/or 7 lines.
-It will be added to your portfolio along the tech stack mentioned below.
+StarDex is a web application that allows users to view a map of the stars that are visible from Earth and navigate through them for information. They are organized by groups in space, and as you click on a group, a more “zoomed in” image is displayed, where you can individually view details on stars, constellations and planets. As a user, you can click on groups and view the information on each item. This application brings a wealth of the information about space in the form of an attractive and easy to navigate UI.
 
 ## technology stack
 
