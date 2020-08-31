@@ -2,12 +2,12 @@
   kind: Service
   apiVersion: v1
   metadata:
-    name: aspnet-api
+    name: aspnet-dom
   spec:
     ports:
-      - name: aspnet-api
+      - name: aspnet-dom
         port: 80
-        targetPort: aspnet-api-http
+        targetPort: domain-http
     selector:
-      app: aspnet-api
+      app: aspnet-dom
     type: LoadBalancer

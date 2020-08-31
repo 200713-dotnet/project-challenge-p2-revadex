@@ -2,20 +2,20 @@
   apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: aspnet-api-image
+    name: aspnet-image
   spec:
     replicas: 1
     selector:
       matchLabels:
-        app: aspnet-api-image
+        app: aspnet-image
     template:
       metadata:
         labels:
-          app: aspnet-api-image
+          app: aspnet-image
       spec:
         containers:
-        - name: aspnet-api-image
+        - name: aspnet-image
           image: jfantauzzi/imageapi2020
           ports:
             - containerPort: 80
-              name: aspnet-api-image-http
+              name: image-http

@@ -2,20 +2,20 @@
   apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: aspnet-api-domain
+    name: aspnet-dom
   spec:
     replicas: 1
     selector:
       matchLabels:
-        app: aspnet-api-domain
+        app: aspnet-dom
     template:
       metadata:
         labels:
-          app: aspnet-api-domain
+          app: aspnet-dom
       spec:
         containers:
-        - name: aspnet-api-domain
+        - name: aspnet-dom
           image: jfantauzzi/domainapi2020
           ports:
             - containerPort: 80
-              name: aspnet-api-domain-http
+              name: domain-http

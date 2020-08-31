@@ -2,12 +2,12 @@
   kind: Service
   apiVersion: v1
   metadata:
-    name: aspnet-api
+    name: aspnet-image
   spec:
     ports:
-      - name: aspnet-api
+      - name: aspnet-image
         port: 80
-        targetPort: aspnet-api-http
+        targetPort: image-http
     selector:
-      app: aspnet-api
+      app: aspnet-image
     type: LoadBalancer
