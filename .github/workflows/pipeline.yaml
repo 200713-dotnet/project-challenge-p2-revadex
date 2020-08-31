@@ -107,7 +107,7 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - run: echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_LOGIN} --password-stdin
-        - run: docker image build -f .docker/AngularClient.dockerfile -t angular .
+        - run: docker image build -f ../.docker/AngularClient.dockerfile -t angular .
         - run: docker image tag angular jfantauzzi/ng2020
         - run: docker image push jfantauzzi/ng2020
         - run: docker logout
