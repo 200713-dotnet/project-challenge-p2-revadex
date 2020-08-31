@@ -50,8 +50,6 @@ jobs:
       - run: dotnet test Image.Service/Image.Testing/*.csproj
 
   # ANALYZE
-
-
   analyze_image_api:
     needs: [build_img_api, test]
     runs-on: ubuntu-20.04
