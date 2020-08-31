@@ -1,4 +1,5 @@
 jobs:
+  # BUILD
   build_angular:
     defaults:
       run:
@@ -9,7 +10,6 @@ jobs:
       - run: npm ci #clean-install
       - run: npm run build
       - run: npm run lint
-
 
   build_img_api:
     defaults:
@@ -41,6 +41,15 @@ jobs:
       - run: dotnet restore
       - run: dotnet build --no-restore
 
+  # TEST
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet test Domain.Service/DomainService.Testing/*.csproj
+      - run: dotnet test Image.Service/Image.Testing/*.csproj
+      
+  # PACK
   pack_angular:
     defaults:
       run:
